@@ -11,6 +11,18 @@ npm run dev
 
 Open the printed localhost address. Sign in as any demo user. Any six digits pass the 2FA step.
 
+## Live demo
+
+https://oli181305.github.io/corvane-supplier-finance-prototype/
+
+Published from the `gh-pages` branch. To republish after a change:
+
+```bash
+npm run deploy
+```
+
+This rebuilds `dist/index.html` and pushes it to `gh-pages`. GitHub Pages updates the same URL within about a minute.
+
 ## Build the single file for the presentation
 
 ```bash
