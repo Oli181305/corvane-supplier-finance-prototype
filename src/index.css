@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ink: #0B0F1A;
+  --grey: #5B6479;
+  --border: #E3E6EC;
+  --page: #F5F6F8;
+  --panel: #FFFFFF;
+  --teal: #00C2B8;
+  --teal-dark: #00897F;
+  --purple: #7C4DFF;
+  --purple-dark: #6D28D9;
+  --blue: #3B82F6;
+  --green: #16A34A;
+  --amber: #D97706;
+  --red: #DC2626;
+}
+
+html, body, #root { height: 100%; }
+body {
+  @apply bg-page text-ink text-base font-sans antialiased;
+  font-feature-settings: 'cv11', 'ss01';
+}
+
+.num { font-variant-numeric: tabular-nums; }
+.label { @apply text-xs uppercase tracking-[0.04em] text-grey; }
+
+input, select, textarea { @apply bg-white; }
+input[type='checkbox'] { @apply h-4 w-4 accent-[#00897F] rounded-sm; }
+input[type='radio'] { @apply h-4 w-4 accent-[#00897F]; }
+
+/* Scrollbar quietness */
+::-webkit-scrollbar { height: 10px; width: 10px; }
+::-webkit-scrollbar-thumb { background: #CBD0D9; border: 2px solid #F5F6F8; }
+::-webkit-scrollbar-track { background: transparent; }
+
+@media print {
+  .no-print { display: none !important; }
+  body { background: white; }
+}
